@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="POS Malaysia UI Testing">
+	<listeners>
+		<!-- Register the ExtentReportListener -->
+		<listener class-name="utils.ExtentReportListener" />
+	</listeners>
+
+	<test name="Verify user can calculate the shipment quote from Malaysia to India.">
+		<classes>
+			<class name="tests.calculatorpage.ShipmentQuoteCalculator" />
+		</classes>
+	</test>
+</suite>
