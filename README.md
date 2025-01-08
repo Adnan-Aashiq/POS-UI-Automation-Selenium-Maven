@@ -43,3 +43,7 @@ mvn test
 ```
 ### 3. View the Test Reports
 After running the tests, navigate to the Project folder and open the extentReports.html file in a browser to view detailed execution results.
+
+## Contact
+If you encounter any issues or have questions, feel free to contact me at **adnanaashiq457@gmail.com** and WhatsApp me on **+92-302-2149193**.
+
