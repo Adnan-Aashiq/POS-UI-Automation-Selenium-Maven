@@ -15,10 +15,12 @@ public class ShipmentQuoteCalculator extends BaseClass {
 
         CalculatorPage calculatorPage = new CalculatorPage(driver);
 
+        calculatorPage.gotoCalculatorSection();
         calculatorPage.enterFromPostCode();
         calculatorPage.enterIndiaInToCountry();
         calculatorPage.enterWeight();
         calculatorPage.clickCalculate();
+        calculatorPage.gotoQuoteSection();
         calculatorPage.verifyQuotes(test);
     }
 }

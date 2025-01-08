@@ -1,10 +1,14 @@
 package pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -24,23 +28,33 @@ public class CalculatorPage {
 	By featureSection = By.xpath(".//dt[contains(text(),'Features')]/following-sibling::dd");
 	By feeSection = By.xpath(".//h3[contains(@class, 'text-2xl')]");
 	By buttonBookNow = By.xpath(".//a[contains(text(),'Book Now')]");
+	By calculatorSection = By.xpath("//div[@class='d-md-flex d-sm-block calculator-container max-w-7xl mx-auto mt-12 sm:space-x-3 px-6 sm:px-0 ng-untouched ng-pristine ng-invalid']"); 
+	By quoteSection = By.xpath("//div[@class='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:pb-24']");
+	
 	
 
 	public CalculatorPage(WebDriver driver) {
 		this.driver = driver;
 	}
+	
+	public void gotoCalculatorSection() {
+		WebElement element = driver.findElement(calculatorSection);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).perform();
+	}
 
-	public void enterIndiaInToCountry() throws InterruptedException {
+	public void enterIndiaInToCountry() {
 		driver.findElement(toCountry).clear();
 		driver.findElement(toCountry).sendKeys("India");
-        Thread.sleep(5000);
-		driver.findElement(selectIndia).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		// Wait until the element is visible
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(selectIndia));
+		element.click();
 		
 	}
 	
-	public void enterFromPostCode() throws InterruptedException {
+	public void enterFromPostCode() {
 		driver.findElement(fromPostCode).sendKeys("35600");
-		Thread.sleep(5000);
 		
 	}
 	
@@ -51,8 +65,17 @@ public class CalculatorPage {
 	
 	public void clickCalculate() throws InterruptedException {
 		driver.findElement(Calculate).click();
-		Thread.sleep(5000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		// Wait until the element is visible
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(quoteHeading));
+		element.click();
 		
+	}
+	
+	public void gotoQuoteSection() {
+		WebElement element = driver.findElement(quoteSection);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).perform();
 	}
 	
 	public void verifyQuotes(ExtentTest test) throws InterruptedException {
