@@ -1,0 +1,11 @@
+
+/.vscode
+*.html
+/src
+/src
+/target/surefire-reports
+/target/maven-status/maven-compiler-plugin/compile/default-compile
+/target/maven-status/maven-compiler-plugin/testCompile
+/target
+/src
+src/.DS_Store

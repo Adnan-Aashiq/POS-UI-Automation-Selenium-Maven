@@ -30,9 +30,10 @@ public class CalculatorPage {
 		this.driver = driver;
 	}
 
-	public void enterIndiaInToCountry() {
+	public void enterIndiaInToCountry() throws InterruptedException {
 		driver.findElement(toCountry).clear();
 		driver.findElement(toCountry).sendKeys("India");
+        Thread.sleep(5000);
 		driver.findElement(selectIndia).click();
 		
 	}
