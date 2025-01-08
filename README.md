@@ -1,5 +1,8 @@
 # Selenium UI Automation Maven Project
 
+Below is the IDE run of the Project.
+https://github.com/user-attachments/assets/c4c85f80-43b7-4b9b-a1de-8c6db9b5c818
+
 ## Project Overview
 This project is a Selenium-based UI automation framework using Maven, designed for end-to-end testing of web applications. The framework supports test execution and generates detailed ExtentReports.
 
