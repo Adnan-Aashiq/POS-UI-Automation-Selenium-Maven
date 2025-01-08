@@ -19,7 +19,7 @@ Before cloning and running this project, ensure the following are installed on y
 ### 1. Clone the Repository
 Run the following commands in your terminal:
 ```bash
-git clone https://github.com/your-repository-url.git
+git clone https://github.com/Adnan-Aashiq/POS-UI-Automation-Selenium-Maven.git
 cd selenium-maven-project
 ```
 ## 2. Run Maven Commands
