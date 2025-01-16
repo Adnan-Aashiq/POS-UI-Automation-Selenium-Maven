@@ -8,7 +8,7 @@ import pages.CalculatorPage;
 
 public class ShipmentQuoteCalculator extends BaseClass {
 
-    @Test(groups = {"Smoke"})
+    @Test()
     public void verifyShipmentQuotes() throws InterruptedException {
         // Get the ExtentTest instance created by ExtentReportListener
         ExtentTest test = ExtentReportListener.test;
